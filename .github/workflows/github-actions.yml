@@ -6,16 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 El trabajo fue activado automáticamente por un ${{ github.event_name }} evento."      
-
-      - name: Consultando el código del repositorio
-        uses: actions/checkout@v3      
-
-      - name: Lista de ficheros del repositorio
-        run: |
-          ls ${{ github.workspace }}
+      
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
 
       - name: Instalando Poetry
         uses: snok/install-poetry@v1
+        
       - run : poetry build
 
       - name: Ejecutando Testing
