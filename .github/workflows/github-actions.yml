@@ -1,4 +1,5 @@
 name: Práctica módulo 2 🚀
+run-name: Práctica módulo 2 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -25,6 +26,3 @@ jobs:
 
       - name: Fichero del firectorio
         run: ls ${{ github.workspace }}
-
-      - name: Publish to GH Release        
-        uses: softprops/action-gh-release@v1
