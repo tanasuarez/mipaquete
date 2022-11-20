@@ -1,5 +1,4 @@
-name: GitHub Actions módulo 2
-run-name: Práctica módulo 2 🚀
+name: Práctica módulo 2 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
@@ -11,11 +10,10 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-
-      - name: Install dependencies
-        run: poetry install
+      - uses: snok/install-poetry@v1
+        with:
+          version: 1.2.1       
+        
 
       - name: Ejecutando Testing
         run: poetry run pytest
