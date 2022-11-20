@@ -11,3 +11,4 @@ def test_mayuscula__una_mayuscula():
 def test_mayuscula_todo_minuscula():
     """Comprueba que solo pone una palabra en minuscula"""
     assert string.minuscula('TIENE QUE APARECER')  == 'tiene que aparecer'
+    
