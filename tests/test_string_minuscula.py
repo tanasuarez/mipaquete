@@ -1,4 +1,4 @@
-from mipaquete.mipaquete import string
+from mipaquete import string
 
 def test_mayuscula():
     """Comprueba que devuelve la string en mayuscula"""

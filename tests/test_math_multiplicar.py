@@ -1,4 +1,4 @@
-from mipaquete.mipaquete import math
+from mipaquete import math
 
 """"
 TEST multiplicar
