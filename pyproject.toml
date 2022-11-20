@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mipaquete"
+name = "src"
 version = "0.2.0"
 description = ""
 authors = ["Tanausú <tanausu.jorge@gmail.com>"]

@@ -1,4 +1,4 @@
-from mipaquete import math
+from src import math
 
 """"
 TEST RESTAR
