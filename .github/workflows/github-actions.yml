@@ -19,10 +19,8 @@ jobs:
 
       - name: Ejecutando Testing
         run: poetry run pytest
+
       - run: poetry build
 
-
       - name: Saluda mipaquete
-        run: |
-          from src import funcion as f
-          f.hola()
+        run: poetry run hola

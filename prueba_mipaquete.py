@@ -1,3 +1,3 @@
-from src import funcion
+from src import saludar
 
-print(funcion.hola())
+print(saludar.hola())

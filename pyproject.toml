@@ -10,6 +10,8 @@ python = "^3.9"
 pandas = "^1.5.1"
 pytest = "^7.2.0"
 
+[tool.poetry.scripts]
+hola = "src.saludar:hola"
 
 [build-system]
 requires = ["poetry-core"]
