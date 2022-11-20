@@ -1,3 +1,3 @@
-from src import funcion as f
+from src import funcion
 
-print(f.hola())
+print(funcion.hola())

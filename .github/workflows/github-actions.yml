@@ -15,10 +15,6 @@ jobs:
         with:
           version: 1.2.1
         
-      - name: Test with pytest==7.1.2
-        run: |
-          pip install pytest
-          pytest
 
       - name: Ejecutando Testing
         run: poetry run pytest
