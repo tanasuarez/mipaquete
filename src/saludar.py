@@ -1,2 +1,2 @@
 def hola():
-    return "Hola"
+    print ("Hola")
