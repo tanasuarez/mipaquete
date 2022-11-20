@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 El trabajo fue activado automáticamente por un ${{ github.event_name }} evento."      
-      
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
