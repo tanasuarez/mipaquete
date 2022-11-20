@@ -1,4 +1,4 @@
-from mipaquete import math
+from mipaquete.mipaquete import math
 
 """
 TEST SUMAR
