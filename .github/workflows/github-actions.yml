@@ -18,7 +18,9 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - run : poetry build
-
       - name: Ejecutando Testing
         run: poetry run pytest
+      - run: poetry build
+      
+      - name: Fichero del firectorio
+        run: ls ${{ github.workspace }}
