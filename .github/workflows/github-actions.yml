@@ -1,26 +1,25 @@
-name: Práctica módulo 2 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
+name : Building
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs: 
+  building:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 El trabajo fue activado automáticamente por un ${{ github.event_name }} evento."      
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-
-      - uses: snok/install-poetry@v1
-        with:
-          version: 1.2.1       
-        
-
-      - name: Ejecutando Testing
+          python-version: '3.10'
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install
+      - name: Testing
         run: poetry run pytest
       - run: poetry build
-
-      - name: Fichero del firectorio
-        run: ls ${{ github.workspace }}
-
+      - run: ls ${{ github.workspace }}
       - name: Publish to GH Release        
         uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ github.workspace }}/dist/*
